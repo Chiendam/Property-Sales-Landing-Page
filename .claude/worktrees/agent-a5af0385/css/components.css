@@ -1,0 +1,179 @@
+/* css/components.css — UI components. References tokens from css/main.css. */
+
+/* ── Button system ────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px; /* WCAG 2.5.5 touch target */
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn--primary {
+  background-color: var(--color-gold);
+  color: var(--color-navy-dark); /* navy-dark on gold — contrast ~4.6:1, passes WCAG AA */
+}
+
+.btn--primary:hover {
+  background-color: var(--color-gold-light);
+}
+
+.btn--primary:active {
+  background-color: var(--color-gold-dark);
+}
+
+.btn--secondary {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-navy-light);
+}
+
+/* ── Site header ──────────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-navy);
+  box-shadow: var(--shadow-card);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  padding-inline: var(--container-padding);
+}
+
+.site-header__logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+}
+
+.site-header__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+}
+
+/* ── Site nav ─────────────────────────────────────────────────────── */
+.site-nav {
+  display: none; /* shown via JS in Phase 3 on desktop */
+}
+
+@media (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+}
+
+.site-nav__link {
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  padding-block: var(--space-sm);
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.site-nav__link:hover {
+  color: var(--color-gold-light);
+  border-bottom-color: var(--color-gold);
+}
+
+/* ── Hamburger toggle (mobile, Phase 3 for JS) ────────────────────── */
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-white);
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* ── Mobile sticky CTA bar ────────────────────────────────────────── */
+.mobile-cta-bar {
+  display: none; /* Phase 2 populates content; Phase 3 adds JS scroll behavior */
+}
+
+@media (max-width: 767px) {
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background-color: var(--color-navy);
+    border-top: 1px solid var(--color-navy-light);
+    padding: var(--space-sm) var(--container-padding);
+    gap: var(--space-sm);
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ── Card base ────────────────────────────────────────────────────── */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-lg);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* ── Site footer ──────────────────────────────────────────────────── */
+.site-footer {
+  background-color: var(--color-navy-dark);
+  color: var(--color-white);
+  padding-block: var(--space-2xl);
+}
+
+.site-footer__link {
+  color: var(--color-gold);
+}
+
+.site-footer__link:hover {
+  color: var(--color-gold-light);
+}
+
+.site-footer__disclaimer {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-navy-light);
+}

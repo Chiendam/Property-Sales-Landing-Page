@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Tên Tổ Chức] — Tư Vấn Vay Mua Nhà</title>
+
+  <!-- Fonts: preconnect first, then stylesheet (FOUND-04) -->
+  <!-- fonts.googleapis.com: no crossorigin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- fonts.gstatic.com: crossorigin required for CORS font files -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Montserrat:wght@800&display=swap&subset=vietnamese" rel="stylesheet">
+
+  <!-- Phosphor Icons v2.1.2 — CSS bold variant, pinned version (FOUND-05) -->
+  <!-- DO NOT change to @latest or @2.1.1 — version is pinned per research -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.2/src/bold/style.css">
+
+  <!-- CSS: load order matters — tokens (main) before layout before components (FOUND-01) -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ── Sticky header (Phase 2 populates nav links + phone number) ── -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner container">
+      <a href="/" class="site-header__logo">[Tên Tổ Chức]</a>
+
+      <!-- Phone always visible in header (NAV-01 — sticky + tel: link) -->
+      <a href="tel:+84000000000" class="site-header__phone">
+        <i class="ph-bold ph-phone" aria-hidden="true" style="font-size: 18px;"></i>
+        Gọi Ngay: [SĐT]
+      </a>
+
+      <!-- Nav (Phase 2 populates links, Phase 3 adds hamburger JS) -->
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <!-- nav links added in Phase 2 -->
+      </nav>
+
+      <!-- Hamburger toggle (Phase 3 adds aria-expanded JS) -->
+      <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false" aria-controls="site-nav">
+        <i class="ph-bold ph-list" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── Main content ──────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- ── Hero section ──────────────────────────────────────────── -->
+    <!-- Background image and overlay added in Phase 2 -->
+    <section id="hero" aria-labelledby="hero-heading" class="section section--dark">
+      <div class="container">
+        <h1 id="hero-heading">[Placeholder: Giải Pháp Vay Mua Nhà Ưu Đãi]</h1>
+        <p>[Placeholder: Hỗ trợ vay lên đến 80% giá trị bất động sản]</p>
+
+        <!-- Primary CTA — visual sample #1: gold bg + navy-dark text (UI-SPEC Visual Sample Req #1) -->
+        <a href="#contact" class="btn btn--primary">Đăng Ký Tư Vấn Miễn Phí</a>
+      </div>
+    </section>
+
+    <!-- ── Services section ───────────────────────────────────────── -->
+    <section id="services" aria-labelledby="services-heading" class="section section--alt">
+      <div class="container">
+        <!-- Visual sample #3: h2 with navy color and Be Vietnam Pro (UI-SPEC Visual Sample Req #3) -->
+        <h2 id="services-heading" class="section__heading">Dịch Vụ Của Chúng Tôi</h2>
+        <!-- Cards added in Phase 2 -->
+        <!-- Visual sample #4: Phosphor icon at 24px (UI-SPEC Visual Sample Req #4) -->
+        <p>
+          <i class="ph-bold ph-house" aria-hidden="true" style="font-size: 24px;"></i>
+          <!-- Visual sample #5: Vietnamese diacritics (UI-SPEC Visual Sample Req #5) -->
+          Đăng Ký Tư Vấn Miễn Phí
+        </p>
+        <!-- Visual sample #2: secondary button (UI-SPEC Visual Sample Req #2) -->
+        <a href="#contact" class="btn btn--secondary">Tìm Hiểu Thêm</a>
+      </div>
+    </section>
+
+    <!-- ── Loan products section ──────────────────────────────────── -->
+    <section id="loan-products" aria-labelledby="loan-products-heading" class="section section--light">
+      <div class="container">
+        <h2 id="loan-products-heading" class="section__heading">Gói Vay Ưu Đãi</h2>
+        <!-- Product cards added in Phase 2 -->
+      </div>
+    </section>
+
+    <!-- ── Calculator section ────────────────────────────────────── -->
+    <section id="calculator" aria-labelledby="calculator-heading" class="section section--alt">
+      <div class="container">
+        <h2 id="calculator-heading" class="section__heading">Máy Tính Vay</h2>
+        <!-- Calculator inputs added in Phase 2; JS logic in Phase 3 -->
+      </div>
+    </section>
+
+    <!-- ── Projects section ──────────────────────────────────────── -->
+    <section id="projects" aria-labelledby="projects-heading" class="section section--light">
+      <div class="container">
+        <h2 id="projects-heading" class="section__heading">Dự Án Nổi Bật</h2>
+        <!-- Project cards added in Phase 2 -->
+      </div>
+    </section>
+
+    <!-- ── Process section ───────────────────────────────────────── -->
+    <section id="process" aria-labelledby="process-heading" class="section section--alt">
+      <div class="container">
+        <h2 id="process-heading" class="section__heading">Quy Trình Vay Đơn Giản</h2>
+        <!-- Process steps added in Phase 2 -->
+      </div>
+    </section>
+
+    <!-- ── Testimonials section ──────────────────────────────────── -->
+    <section id="testimonials" aria-labelledby="testimonials-heading" class="section section--light">
+      <div class="container">
+        <h2 id="testimonials-heading" class="section__heading">Khách Hàng Nói Gì</h2>
+        <!-- Testimonial cards added in Phase 2 -->
+      </div>
+    </section>
+
+    <!-- ── Contact / lead form section ──────────────────────────── -->
+    <section id="contact" aria-labelledby="contact-heading" class="section section--dark">
+      <div class="container">
+        <h2 id="contact-heading" class="section__heading">Đăng Ký Tư Vấn</h2>
+        <!-- Form fields added in Phase 2; validation + submit in Phase 3 -->
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ── Footer (Phase 2 populates content) ──────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>[Tên Tổ Chức] — Placeholder address and license. Phase 4 adds legal content.</p>
+      <p class="site-footer__disclaimer">
+        Lãi suất tham khảo, có thể thay đổi theo điều kiện thực tế. Xem chi tiết tại chi nhánh.
+      </p>
+      <p>&copy; 2026 [Tên Tổ Chức]</p>
+    </div>
+  </footer>
+
+  <!-- ── Mobile sticky CTA bar (Phase 2 adds content) ───────────── -->
+  <div class="mobile-cta-bar" aria-hidden="true">
+    <!-- Tel link + scroll-to-form button added in Phase 2 -->
+  </div>
+
+  <!-- ── Scripts: ALL use defer (FOUND-02) ────────────────────────── -->
+  <script src="js/nav.js" defer></script>
+  <script src="js/calculator.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/form.js" defer></script>
+
+</body>
+</html>
